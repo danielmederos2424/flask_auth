@@ -25,23 +25,27 @@ A simple and secure Flask API for user authentication with JWT tokens.
 ### Installation
 
 1. Clone this repository:
+
    ```bash
-   git clone <repository-url>
-   cd flask-auth-api
+   git clone https://github.com/danielmederos2424/flask_auth
+   cd flask-auth
    ```
 
 2. Create and activate a virtual environment:
+
    ```bash
    python -m venv venv
    source venv/bin/activate  # On Windows: venv\Scripts\activate
    ```
 
 3. Install dependencies:
+
    ```bash
    pip install -r requirements.txt
    ```
 
 4. Set up environment variables (optional):
+
    ```bash
    cp .env.example .env
    # Edit .env file with your configuration
@@ -53,7 +57,7 @@ A simple and secure Flask API for user authentication with JWT tokens.
 python run.py
 ```
 
-The API will be available at http://localhost:5000
+The API will be available at <http://localhost:5000>
 
 ## API Endpoints
 
@@ -78,11 +82,11 @@ The API will be available at http://localhost:5000
 - `GET /protected` - Example protected endpoint (requires authentication)
   - Response: `{ "msg": "This is a protected endpoint", "user_id": 1 }`
 
-## Authentication
+## Using Authentication
 
 Authentication is required for protected endpoints. Include the JWT token in the Authorization header:
 
-```
+```http
 Authorization: Bearer <your-jwt-token>
 ```
 
@@ -105,6 +109,7 @@ For more details, see [tests/README.md](tests/README.md)
 For production deployment:
 
 1. Use a production WSGI server like Gunicorn:
+
    ```bash
    pip install gunicorn
    gunicorn 'auth_api:create_app()'

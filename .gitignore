@@ -22,8 +22,9 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
-.idea
 .venv
+
+.idea
 
 # Flask
 instance/
